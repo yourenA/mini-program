@@ -1,0 +1,5 @@
+<!--pages/preview/preview.wxml-->
+<view class='preview-container'>
+  <view><image class='preview-image' bindtap="handleImagePreview" wx:if="{{src}}" mode="widthFix" src="{{src}}"></image></view>
+  <view class='preview-save' bindtap='savePreview'>确定</view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/takePhoto/takePhoto.wxml-->
+ <view class='take-photo-container' >
+  <camera device-position="back" flash="{{flash}}" binderror="error" style="width: 100%; height:87%"></camera>
+  <view class='take-photo'> 
+     <view bindtap="takePhotoFlash" class='flash-icon'><image  mode='aspectFill' src="{{flashIconPath}}"></image></view>
+    <view bindtap="takePhoto" class='camera-icon'><image  mode='aspectFill' src="{{cameraIconPath}}"></image></view>
+   
+  </view>
+ </view>

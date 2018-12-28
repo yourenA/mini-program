@@ -1,0 +1,22 @@
+/**app.wxss**/
+
+page {
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.container {
+  background-color: #f8f8f8;
+   min-height: 100%;
+  padding: 0 30rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-row {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #353535;
+  line-height: 2em;
+}

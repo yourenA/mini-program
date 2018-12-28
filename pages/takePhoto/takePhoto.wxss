@@ -1,0 +1,40 @@
+/* pages/takePhoto/takePhoto.wxss */
+.take-photo-container{
+  width: 100%;
+  height:100%;
+
+}
+.take-photo{
+  width: 100%;
+  height: 13%;
+  
+  background:#52c41a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.take-photo  .camera-icon{
+width: 64px;
+  height: 64px; 
+   border: 1px solid #fff;
+  border-radius:50%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.take-photo image{
+ width:48px;
+ height: 48px;
+  
+}
+.take-photo  .flash-icon{
+  position: absolute;
+  left: 0;
+
+  margin-top: 20px;
+ margin-left:20px;
+  width: 64px;
+  height: 64px; 
+  align-self: flex-start;
+}

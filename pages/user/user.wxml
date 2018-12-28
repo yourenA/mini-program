@@ -1,0 +1,13 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}"> 登录 </button>
+    <block wx:else>
+      <view>
+      <text class="userinfo-nickname">{{userInfo.username}}</text>
+      </view>
+      
+    </block>
+  </view>
+
+</view>

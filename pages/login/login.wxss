@@ -1,0 +1,54 @@
+/* pages/login/login.wxss */
+
+.login-container {
+  
+  justify-content: center;
+}
+form{
+  padding: 30rpx 40rpx;
+border-radius:4rpx;
+
+  margin-top: -200rpx;
+  background-color: #FFFFFF;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  line-height: 2;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  justify-content:center;
+}
+
+.row text {
+  width:160rpx;
+  text-align: right;
+  color:#353535
+}
+
+.title text {
+  text-align: center;
+  font-size: 45rpx;
+   width:auto;
+}
+
+.row input {
+  font-size: 30rpx;
+  color: #3e3e3e;
+  flex-grow: 3;
+  border: 1px solid #52c41a;
+  display: inline-block;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.15rem #aaa;
+  padding:7rpx 10rpx;
+}
+
+.row button {
+  padding: 0 2rem;
+}

@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="text-row">
+    <text>欢迎 {{data.username}} 使用轨迹记录系统！</text>
+  </view>
+  <view class="text-row">
+    <text>请点击"开始记录轨迹"按钮进行轨迹记录</text>
+  </view>
+  <view class="text-row">
+    <button type="primary" size="default" bindtap="startRecord">
+      开始记录轨迹
+    </button>
+    <button open-type='share'>分享</button>
+  </view>
+  <view class="text-row">
+    <button type="warn" size="default" bindtap="stopRecord">
+      停止记录轨迹
+    </button>
+  </view>
+  <view class="text-row">
+    <button type="primary" size="default" bindtap="startCamera">
+      打开手工摄像头
+    </button>
+  </view>
+   <view class="text-row">
+    <button type="primary" size="default" bindtap="startNativeCamera">
+      打开自带摄像头
+    </button>
+  </view>
+  <view class='demo-text-1'>{{count}}</view>
+  <block wx:for="{{dateArr}}" wx:key="*this" wx:for-item="item">
+    <text class="log-item">{{index + 1}}. {{item}}</text>
+  </block>
+  <view class="text-row">
+    <map class='map'id='myMap' polyline="{{polyline}}" show-location markers="{{markers}}" bindmarkertap="markertap" longitude="{{longitude}}" latitude="{{latitude}}"></map>
+  </view>
+  <view class="text-row">
+    <button type="primary" size="default" bindtap="getLocation">
+      获取定位
+    </button>
+  </view>
+   <view class="text-row">
+    <button type="primary" size="default" bindtap="includePoints">
+      调整视图
+    </button>
+  </view>
+   <view class="text-row">
+    <button type="primary" size="default" bindtap="openTrajectory">
+      打开轨迹记录
+    </button>
+  </view>
+</view>
