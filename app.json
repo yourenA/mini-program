@@ -1,40 +1,41 @@
 {
   "pages": [
     "pages/qqmap/qqmap",
+    "pages/home/home",
+     
+    
     "pages/index/index",
+  
     "pages/preview/preview",
     "pages/takePhoto/takePhoto",
-   
     "pages/logs/logs",
     "pages/user/user",
     "pages/login/login",
-     
-      "pages/run/run"
-   
+    "pages/run/run"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "抄表员轨迹记录系统",
+    "navigationBarTitleText": "抄表员抄表记录系统",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": false,
     "backgroundColor": "#000000"
   },
   "tabBar": {
     "list": [
+    
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "icon/home.png",
-        "selectedIconPath": "icon/home-select.png"
+        "pagePath": "pages/qqmap/qqmap",
+        "text": "抄表",
+        "iconPath": "icon/analysis.png",
+        "selectedIconPath": "icon/analysis-select.png"
       },
-      {
-        "pagePath": "pages/user/user",
-        "text": "我",
-        "iconPath": "icon/log.png",
-        "selectedIconPath": "icon/log-select.png"
-      }
+        {
+          "pagePath": "pages/home/home",
+          "text": "个人",
+          "iconPath": "icon/home.png",
+          "selectedIconPath": "icon/home-select.png"
+        }
     ]
-  },
-  "debug": true
+  }
 }

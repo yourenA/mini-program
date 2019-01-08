@@ -11,7 +11,7 @@
     </view>
     <view class="row">
       <text>用户名：</text>
-      <input type="text" name="username" value="admin" placeholder="请输入用户名" />
+      <input type="text" name="username" value="reader2" placeholder="请输入用户名" />
     </view>
     <view class="row">
       <text>密　码：</text>

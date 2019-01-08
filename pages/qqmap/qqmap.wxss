@@ -1,1 +1,54 @@
 /* pages/qqmap/qqmap.wxss */
+.mainView{
+  height: 100%;
+  width: 100%;
+ position: relative;
+}
+
+.operate{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:150rpx;
+  background:rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+
+  padding: 5rpx 30rpx;
+  background: #52c41a;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 3px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.btn cover-image{
+  width: 90rpx;
+  height: 90rpx;
+
+}
+.location{
+  position: absolute;
+  bottom: 200rpx;
+  right:30rpx;
+  background: #52c41a;
+  width: 65rpx;
+  height:65rpx;
+  border-radius: 10rpx;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker{
+  height: 80rpx;
+    line-height: 80rpx;
+    background-color: #FFFFFF;
+    padding-left:20rpx; 
+}

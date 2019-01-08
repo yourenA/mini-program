@@ -1,0 +1,23 @@
+/* pages/home/home.wxss */
+.picker{
+  margin-bottom: 15rpx;
+
+}
+.picker text,.picker image{
+vertical-align: middle
+}
+
+
+
+.flex-space button{
+  position: relative;
+  left: 50rpx;
+}
+image{
+  width:70rpx;
+  height: 70rpx;
+}
+.flex-coloum{
+flex-direction: column;
+align-items: flex-start;
+}

@@ -26,6 +26,10 @@ Page({
   },
   formSubmit(e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    })
     const username = e.detail.value.username;
     const password = e.detail.value.password;
     const company_code = e.detail.value.company_code;
@@ -34,7 +38,8 @@ Page({
       data: {
         username,
         password,
-        company_code
+        company_code,
+        source:'2'
       },
       method: 'POST',
       header: {
@@ -47,15 +52,20 @@ Page({
           console.log('登陆成功')
           wx.setStorageSync('userInfo', res.data)
           app.globalData.userInfo = res.data
+          wx.hideLoading()
           wx.showToast({
             title: '登陆成功',
             icon: 'success'
           })
-          wx.switchTab({
-            url: '/pages/index/index'
-          })
+          setTimeout(function(){
+            wx.switchTab({
+              url: '/pages/home/home'
+            })
+          },1000)
+        
         }else{
           console.log('登陆失败')
+          wx.hideLoading()
           util.converErrorCodeToMsg(res.data)
         }
         
