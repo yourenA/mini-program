@@ -1,5 +1,41 @@
 <!--pages/preview/preview.wxml-->
 <view class='preview-container'>
-  <view><image class='preview-image' bindtap="handleImagePreview" wx:if="{{src}}" mode="widthFix" src="{{src}}"></image></view>
-  <view class='preview-save' bindtap='savePreview'>确定</view>
+
+  <!-- <view class='preview-box'>
+    <image class='preview-image' bindtap="handleImagePreview" wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+  </view> -->
+  <view class="question-images-area">
+
+    <!-- 添加图片按钮  -->
+    <view class="question-images-tool">
+      选择照片
+    </view> 
+
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{images}}" wx:key="*this"  wx:key="url" wx:for-index="idx">
+        <view class="q-image-wrap">
+   
+          <view wx:if="{{item.percent>0}}" class="q-image-progress">
+            <progress border-radius='5px' percent="{{item.percent}}"  stroke-width="8" />
+          </view>
+          <image class="q-image" src="{{item.url}}" mode="aspectFill" data-idx="{{idx}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{idx}}" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+      <block wx:if="{{images.length < 9}}">
+        <view class="q-image-wrap  q-image-add">
+        
+          <image class="q-image" src="../../icon/add.png" bindtap="chooseImage"></image>
+
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <view class='preview-save' bindtap='savePreview'>上传抄表照片</view>
+  <view wx:if="{{percent > 0}}" class="preview-progress">
+    <progress border-radius='5px' percent="{{percent}}" show-info stroke-width="12" />
+  </view>
 </view>

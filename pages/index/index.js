@@ -58,7 +58,7 @@ Page({
 
         var locationString = latitude + "," + longitude;
         wx.request({
-          url: 'http://apis.map.qq.com/ws/geocoder/v1/?l&get_poi=1',
+          url: 'https://apis.map.qq.com/ws/geocoder/v1/?l&get_poi=1',
           data: {
             "key": "YLFBZ-WHAWI-ZXUGH-53Q65-TOJ7E-ADBNQ",
             "location": locationString
@@ -138,7 +138,10 @@ Page({
   },
   startNativeCamera:function(){
     wx.chooseImage({
+      sizeType:'compressed',
+      count:1,
       success(res) {
+        console.log('res', res)
         const tempFilePaths = res.tempFilePaths[0]
         wx.navigateTo({
           url: `/pages/preview/preview?src=${tempFilePaths}`

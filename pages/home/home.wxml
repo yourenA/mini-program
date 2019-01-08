@@ -1,0 +1,54 @@
+<!--pages/home/home.wxml-->
+<!--index.wxml-->
+<view class="container">
+ <view class="text-row flex-space">
+   <image
+    
+          src="../../icon/home-sys.png"
+        ></image>
+    <view>欢迎使用抄表记录系统！ </view>
+   <button  type='primary' bindtap='reloadpage' size='mini'>刷新页面</button> 
+  </view>
+ <view class="text-row">
+    <image
+         
+          src="../../icon/home-date.png"
+        ></image>
+    <text>当前日期: {{date}} </text>
+  </view>
+  <view class="text-row">
+    <image
+         
+          src="../../icon/home-user.png"
+        ></image>
+    <text>当前用户: {{userInfo.company_name}}  {{userInfo.username}}</text>
+  </view>
+
+  <view class="text-row flex-coloum">
+ 
+    <picker
+     class="picker"
+    mode="date"
+    value="{{month}}"
+    start="2017-10"
+    end="{{endMonth}}"
+    bindchange="bindDateChange"
+    fields='month'
+  >
+     <image
+          src="../../icon/home-map.png"
+        ></image><text>历史记录: {{month}}</text>
+    
+  </picker>
+  <map show-location polyline="{{polyline}}" style="width: 100%; height: 600rpx" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}"  bindmarkertap="bindmarkertap">
+
+  </map>
+  </view>
+
+   <view class="view-row">
+    <button type="default" size="default" bindtap="logout">
+      退出当前账号
+    </button>
+   
+  </view>
+</view>

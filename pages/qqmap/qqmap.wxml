@@ -1,2 +1,19 @@
-<!--pages/qqmap/qqmap.wxml-->
-<text>pages/qqmap/qqmap.wxml</text>
+<view class="mainView">
+
+  <map bindtap="{{bindMaptap}}" show-location  class="mapView" polyline="{{polyline}}" style="width: 100%; height: calc(100% )" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" bindcallouttap="bindcallouttap" bindmarkertap="bindmarkertap">
+      <cover-view class="operate">
+
+        <cover-view class="btn" bindtap="openCamera">
+           <cover-image  src="../../icon/camera.png"></cover-image>
+           <cover-view>拍照抄表  </cover-view>
+        </cover-view>
+        
+      </cover-view>
+  
+      <cover-view class="location" bindtap="getLocation">
+         <cover-image style="width: 28px; height: 28px;" src="../../icon/location-archer.png"></cover-image>
+      </cover-view>
+
+  </map>
+
+</view>
