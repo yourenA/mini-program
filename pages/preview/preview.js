@@ -118,18 +118,28 @@ Page({
                 gcoord.GCJ02, // 当前坐标系
                 gcoord.BD09 // 目标坐标系
               );
+
               console.log('that.data',that.data)
+            
               let nowToDoneDistance = util.getDistance(result[1], result[0], that.data.doneLat, that.data.doneLng);
               let nowToNextDistance = util.getDistance(result[1], result[0], that.data.nextLat, that.data.nextLng);
 
               console.log('当前到已经抄表距离', nowToDoneDistance)
               console.log('当前到下一个抄表距离', nowToNextDistance)
-              const sendPoint = Number(nowToDoneDistance) >= Number(nowToNextDistance) ? { latitude: that.data.nextLat, longitude: that.data.nextLng } : { latitude: that.data.doneLat, longitude: that.data.doneLng }
+              let sendPoint = {}
+              if (nowToDoneDistance=='NaN'){
+                console.log('使用下一个地点')
+                sendPoint={ latitude: that.data.nextLat, longitude: that.data.nextLng } 
+              }else{
+
+                sendPoint = Number(nowToDoneDistance) >= Number(nowToNextDistance) ? { latitude: that.data.nextLat, longitude: that.data.nextLng } : { latitude: that.data.doneLat, longitude: that.data.doneLng }
+              }
+              
               console.log('sendPoint', sendPoint)
               let distance = util.getDistance(result[1], result[0], sendPoint.latitude, sendPoint.longitude);
               console.log('上传图片距离', distance, '米')
-              if (distance > 100) {
-                console.log('大于100米');
+              if (distance > 200) {
+                console.log('大于200米');
                 wx.showToast({
                   title: `当前定位距离目标过远`,
                   icon: 'none'

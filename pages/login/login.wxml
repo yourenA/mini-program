@@ -5,17 +5,17 @@
       <image style="width: 36px; height: 36px;margin-right:15rpx " src="../../icon/guiji.png"></image>
       <text>抄表员轨迹记录系统</text>
     </view>
-   <view class="row">
+   <!-- <view class="row">
       <text>机构代码：</text>
       <input type="text" name="company_code" value="qc" placeholder="请输入机构代码" />
-    </view>
+    </view> -->
     <view class="row">
       <text>用户名：</text>
-      <input type="text" name="username" value="reader2" placeholder="请输入用户名" />
+      <input type="text" name="username" value="" placeholder="请输入用户名" />
     </view>
     <view class="row">
       <text>密　码：</text>
-      <input type="password" name="password" value="123456" placeholder="请输入密码" />
+      <input type="password" name="password" value="" placeholder="请输入密码" />
     </view>
     <view> 
       <button type="primary" form-type="submit" size="default">
