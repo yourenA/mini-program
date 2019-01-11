@@ -38,7 +38,7 @@ Page({
       data: {
         username,
         password,
-        company_code,
+        company_code:'qc',
         source:'2'
       },
       method: 'POST',

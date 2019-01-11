@@ -20,6 +20,19 @@ Page({
     date: ''
   },
   /**
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
    * 监听页面加载
    */
   onLoad: function(options) {
@@ -131,8 +144,8 @@ Page({
     })
     setTimeout(function () {
       that.getDistance()
-    }, 100)
-    that.getDistance()
+    }, 1000)
+    // that.getDistance()
     if (!this.timer) {
       console.log('strt on onload')
       this.timer = setInterval(function() {
@@ -209,7 +222,7 @@ Page({
     const that = this;
     wx.chooseImage({
       sizeType: 'compressed',
-    
+      
       success(res) {
         console.log('res', res)
         
@@ -305,7 +318,7 @@ Page({
           
           let distance = util.getDistance(res.latitude, res.longitude, checkPoint.latitude, checkPoint.longitude);
           console.log('手工距离', distance, '米')
-          if (distance < 200) {
+          if (distance < 100) {
             console.log('小于100米');
 
 

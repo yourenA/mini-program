@@ -46,7 +46,7 @@
   </view>
 
    <view class="view-row">
-    <button type="default" size="default" bindtap="logout">
+    <button type="warn" size="default" bindtap="logout">
       退出当前账号
     </button>
    
